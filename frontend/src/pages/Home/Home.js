@@ -8,10 +8,10 @@ function Home() {
   const navigate = useNavigate();
   const user = localStorage.getItem("user");
   if (!user) {
-    navigate("/login");
+    return navigate("/login");
   }
 
-  return <div className={cx("wrapper")}>ascsa</div>;
+  return <div className={cx("wrapper")}>Content</div>;
 }
 
 export default Home;

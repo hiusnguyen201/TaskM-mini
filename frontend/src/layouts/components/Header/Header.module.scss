@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 48px;
+  padding: 8px;
+  border-bottom: 1px solid hsla(218, 54%, 19.6%, 0.16);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  gap: 8px;
+}
+
+.logout {
+  text-align: end;
+  display: block;
+  background-color: red;
+  padding: 8px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  width: 96px;
+  text-align: center;
+}
