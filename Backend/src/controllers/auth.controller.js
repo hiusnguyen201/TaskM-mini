@@ -12,7 +12,7 @@ module.exports = {
 
       if (!user) {
         return res.status(404).json({
-          message: "Not Found",
+          message: "User not Found",
         });
       }
 
@@ -39,6 +39,7 @@ module.exports = {
   register: async (req, res, next) => {
     try {
       const { username, password, confirmPassword } = req.body;
+      console.log(req.body);
       if (password !== confirmPassword) {
         return res.status(421).json({
           message: "Validate Error",

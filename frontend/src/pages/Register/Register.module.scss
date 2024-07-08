@@ -1,0 +1,99 @@
+.wrapper {
+  background-color: rgb(250, 251, 252);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+}
+
+.card {
+  width: 400px;
+  max-height: calc(100vh - 120px);
+  padding: 32px 40px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+}
+
+.title,
+.desc {
+  text-align: center;
+  display: block;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.title span {
+  margin-left: 8px;
+}
+
+.desc {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border: 2px solid #dfe1e6;
+  border-radius: 3px;
+  padding: 8px 6px;
+  font-size: 14px;
+  color: inherit;
+}
+
+.input + .input {
+  margin-top: 16px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+  background-color: #0052cc;
+  color: #ffffff;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.link {
+  display: block;
+  color: rgb(12, 102, 228);
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.error {
+  display: block;
+  text-align: center;
+  color: red;
+  padding: 12px;
+  background-color: #f8e9e9;
+  border-radius: 4px;
+}
+
+.success {
+  display: block;
+  text-align: center;
+  color: green;
+  padding: 12px;
+  background-color: rgb(236, 254, 236);
+  border-radius: 4px;
+}
