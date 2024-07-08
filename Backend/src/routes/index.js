@@ -7,6 +7,11 @@ const boardRouter = require("./board.route");
 const listRouter = require("./list.route");
 const cardRouter = require("./card.route");
 
+router.get("/", (req, res) => {
+  console.log(111);
+  return res.send("hello");
+});
+
 router.use(authRouter);
 router.use(userRouter);
 router.use(boardRouter);

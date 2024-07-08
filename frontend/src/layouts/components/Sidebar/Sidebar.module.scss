@@ -1,0 +1,48 @@
+.wrapper {
+  margin-top: 40px;
+  max-height: 90vh;
+  padding: 0 16px;
+  position: sticky;
+  top: 40px;
+  height: 300px;
+  width: 256px;
+}
+
+.title {
+  margin-left: 8px;
+  line-height: 20px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  min-height: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #091e420f;
+  }
+
+  & + .nav-item {
+    margin-top: 4px;
+  }
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.seperate {
+  margin-top: 4px;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+}

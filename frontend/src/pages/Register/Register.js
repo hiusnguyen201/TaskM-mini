@@ -42,6 +42,7 @@ function Register() {
           message: "Sign up success",
         });
       } catch (err) {
+        console.log(err);
         const data = err.response.data;
         setMessage({
           type: "error",
@@ -57,58 +58,56 @@ function Register() {
 
   return (
     <div className={cx("wrapper")}>
-      <div className={cx("card")}>
-        <h1 className={cx("title")}>
-          <LogoIcon className={cx("logo")} />
-          <span>TaskM</span>
-        </h1>
+      <h1 className={cx("title")}>
+        <LogoIcon className={cx("logo")} />
+        <span>TaskM</span>
+      </h1>
 
-        {message && <span className={cx(message.type)}>{message.message}</span>}
+      {message && <span className={cx(message.type)}>{message.message}</span>}
 
-        <span className={cx("desc")}>Sign up to continue</span>
-        <input
-          ref={usernameRef}
-          className={cx("input")}
-          type="text"
-          placeholder="username..."
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-        />
-        <input
-          ref={passwordRef}
-          className={cx("input")}
-          type="password"
-          placeholder="password..."
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-        <input
-          ref={confirmPasswordRef}
-          className={cx("input")}
-          type="password"
-          placeholder="confirm password..."
-          onChange={(e) => {
-            setConfirmPassword(e.target.value);
-          }}
-        />
+      <span className={cx("desc")}>Sign up to continue</span>
+      <input
+        ref={usernameRef}
+        className={cx("input")}
+        type="text"
+        placeholder="username..."
+        onChange={(e) => {
+          setUsername(e.target.value);
+        }}
+      />
+      <input
+        ref={passwordRef}
+        className={cx("input")}
+        type="password"
+        placeholder="password..."
+        onChange={(e) => {
+          setPassword(e.target.value);
+        }}
+      />
+      <input
+        ref={confirmPasswordRef}
+        className={cx("input")}
+        type="password"
+        placeholder="confirm password..."
+        onChange={(e) => {
+          setConfirmPassword(e.target.value);
+        }}
+      />
 
-        <button
-          disabled={isSubmit}
-          className={cx("button")}
-          type="click"
-          onClick={() => {
-            setIsSubmit(true);
-          }}
-        >
-          Submit
-        </button>
+      <button
+        disabled={isSubmit}
+        className={cx("button")}
+        type="click"
+        onClick={() => {
+          setIsSubmit(true);
+        }}
+      >
+        Submit
+      </button>
 
-        <Link className={cx("link")} to="/login">
-          Already have an account? Log in
-        </Link>
-      </div>
+      <Link className={cx("link")} to="/login">
+        Already have an account? Log in
+      </Link>
     </div>
   );
 }

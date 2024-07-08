@@ -18,6 +18,7 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   color: var(--primary-text-color);
+  position: relative;
 }
 
 button,
@@ -34,6 +35,11 @@ a {
   color: var(--text-color);
   text-decoration: none;
   font-family: var(--primary-font);
+}
+
+ul {
+  list-style-type: none;
+  color: inherit;
 }
 
 // Scrollbar

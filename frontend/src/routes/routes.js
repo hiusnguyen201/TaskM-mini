@@ -1,4 +1,5 @@
 import config from "~/config";
+import AuthLayout from "~/layouts/AuthLayout";
 import HomePage from "~/pages/Home";
 import LoginPage from "~/pages/Login";
 import RegisterPage from "~/pages/Register";
@@ -11,12 +12,12 @@ const publicRoutes = [
   {
     path: config.routes.login,
     element: LoginPage,
-    layout: null,
+    layout: AuthLayout,
   },
   {
     path: config.routes.register,
     element: RegisterPage,
-    layout: null,
+    layout: AuthLayout,
   },
 ];
 

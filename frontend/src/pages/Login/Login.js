@@ -46,49 +46,47 @@ function Login() {
 
   return (
     <div className={cx("wrapper")}>
-      <div className={cx("card")}>
-        <h1 className={cx("title")}>
-          <LogoIcon className={cx("logo")} />
-          <span>TaskM</span>
-        </h1>
+      <h1 className={cx("title")}>
+        <LogoIcon className={cx("logo")} />
+        <span>TaskM</span>
+      </h1>
 
-        {message && <span className={cx(message.type)}>{message.message}</span>}
+      {message && <span className={cx(message.type)}>{message.message}</span>}
 
-        <span className={cx("desc")}>Log in to continue</span>
-        <input
-          className={cx("input")}
-          type="text"
-          name="username"
-          placeholder="username..."
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-        />
-        <input
-          className={cx("input")}
-          type="password"
-          name="username"
-          placeholder="password..."
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
+      <span className={cx("desc")}>Log in to continue</span>
+      <input
+        className={cx("input")}
+        type="text"
+        name="username"
+        placeholder="username..."
+        onChange={(e) => {
+          setUsername(e.target.value);
+        }}
+      />
+      <input
+        className={cx("input")}
+        type="password"
+        name="username"
+        placeholder="password..."
+        onChange={(e) => {
+          setPassword(e.target.value);
+        }}
+      />
 
-        <button
-          disabled={isSubmit}
-          className={cx("button")}
-          type="click"
-          onClick={() => {
-            setIsSubmit(true);
-          }}
-        >
-          Continue
-        </button>
+      <button
+        disabled={isSubmit}
+        className={cx("button")}
+        type="click"
+        onClick={() => {
+          setIsSubmit(true);
+        }}
+      >
+        Continue
+      </button>
 
-        <Link className={cx("link")} to="/register">
-          Create an account
-        </Link>
-      </div>
+      <Link className={cx("link")} to="/register">
+        Create an account
+      </Link>
     </div>
   );
 }
